@@ -42,6 +42,7 @@ class YaraScanMixin(object):
     table_header = [
         dict(name="Owner", width=20),
         dict(name="Rule", width=10),
+        dict(name="Match", hidden=True),
         dict(name="Offset", style="address"),
         dict(name="hexdump", hex_width=16, width=67),
         dict(name="run", hidden=True),
@@ -177,6 +178,7 @@ class SimpleYaraScan(YaraScanMixin, plugin.TypedProfileCommand,
 
     table_header = [
         dict(name="Rule", width=10),
+        dict(name="Match", hidden=True),
         dict(name="Offset", style="address"),
         dict(name="hexdump", hex_width=16, width=67),
     ]
